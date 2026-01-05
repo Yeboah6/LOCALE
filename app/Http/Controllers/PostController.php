@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Inertia\Inertia;
 
 class PostController extends Controller
 {
@@ -13,7 +14,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        // sleep(2);
+
+        $posts = Post::latest() -> paginate(5);
+        return inertia('Home', ['posts' => $posts]);
     }
 
     /**
@@ -21,7 +25,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Create');
     }
 
     /**

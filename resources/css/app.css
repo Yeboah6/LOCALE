@@ -3,7 +3,7 @@
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
-@source '../**/*.js';
+@source '../**/*.jsx';
 
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
@@ -11,8 +11,9 @@
 }
 
 title {
-    /* @apply text-4xl font-extrabold text-center my-8; */
+    @apply text-4xl font-extrabold text-center my-8;
     font: 100% var(--font-sans);
+    text-align: center;
 
 }
 
