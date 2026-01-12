@@ -19,6 +19,8 @@ export default function Home({ posts }) {
                             </span>
                         </div>
                         <p className="font-medium">{post.body}</p>
+
+                        <Link href={`/posts/${post.id}`} className="text-link" >Read more....</Link>
                     </div>
                 ))}
             </div>
@@ -37,7 +39,6 @@ export default function Home({ posts }) {
                                 : "bg-white text-blue-500 border-blue-500"
                         } ${!link.url && "pointer-events-none opacity-50"}`}
                         dangerouslySetInnerHTML={{ __html: link.label }}
-                        // className="p-1 mx-1"
                     />
                 ))}
             </div>
